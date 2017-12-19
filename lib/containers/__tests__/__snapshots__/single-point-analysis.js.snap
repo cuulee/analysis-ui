@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Components > Analysis > Single Point should render correctly 1`] = `
+exports[`Containers > Single Point should render correctly 1`] = `
 <Provider
   store={
     Object {
@@ -149,6 +149,7 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
           "egressModes": "WALK",
           "fromTime": 25200,
           "maxRides": 4,
+          "maxTripDurationMinutes": 60,
           "monteCarloDraws": 200,
           "reachabilityThreshold": 0,
           "toTime": 32400,
@@ -195,7 +196,6 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
       setActiveVariant={[Function]}
       setComparisonProject={[Function]}
       setProfileRequest={[Function]}
-      setRegionalAnalysisBounds={[Function]}
       variantIndex={0}
       variantName="Default"
       variants={
@@ -931,7 +931,6 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
                 <BookmarkChooser
                   bookmarkData={
                     Object {
-                      "isochroneCutoff": 60,
                       "opportunityDataset": undefined,
                       "profileRequest": Object {
                         "accessModes": "WALK",
@@ -946,6 +945,7 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
                         "fromLon": undefined,
                         "fromTime": 25200,
                         "maxRides": 4,
+                        "maxTripDurationMinutes": 60,
                         "monteCarloDraws": 200,
                         "reachabilityThreshold": 0,
                         "toTime": 32400,
@@ -957,7 +957,7 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
                     }
                   }
                   createBookmark={[Function]}
-                  disabled={true}
+                  disabled={false}
                   fetchTravelTimeSurface={[Function]}
                   selectBookmark={[Function]}
                 >
@@ -987,10 +987,10 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
                             clearAllText="Clear all"
                             clearRenderer={[Function]}
                             clearValueText="Clear value"
-                            clearable={true}
+                            clearable={false}
                             deleteRemoves={true}
                             delimiter=","
-                            disabled={true}
+                            disabled={false}
                             escapeClearsValue={true}
                             filterOptions={[Function]}
                             ignoreAccents={true}
@@ -1021,7 +1021,7 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
                             valueKey="value"
                           >
                             <div
-                              className="Select Select--single is-clearable is-disabled is-searchable"
+                              className="Select Select--single is-searchable"
                             >
                               <div
                                 className="Select-control"
@@ -1040,23 +1040,19 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
                                   >
                                     Select...
                                   </div>
-                                  <div
+                                  <mockConstructor
                                     aria-activedescendant="react-select-6--value"
-                                    aria-expanded={false}
+                                    aria-expanded="false"
+                                    aria-haspopup="false"
                                     aria-owns=""
-                                    aria-readonly="true"
                                     className="Select-input"
+                                    minWidth="5"
                                     onBlur={[Function]}
+                                    onChange={[Function]}
                                     onFocus={[Function]}
+                                    required={false}
                                     role="combobox"
-                                    style={
-                                      Object {
-                                        "border": 0,
-                                        "display": "inline-block",
-                                        "width": 1,
-                                      }
-                                    }
-                                    tabIndex={0}
+                                    value=""
                                   />
                                 </span>
                                 <span
@@ -1077,13 +1073,13 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
                         >
                           <Button
                             block={true}
-                            disabled={true}
+                            disabled={false}
                             onClick={[Function]}
                             style="success"
                           >
                             <a
                               className="btn btn-success btn-block"
-                              disabled={true}
+                              disabled={false}
                               href="#"
                               onClick={[Function]}
                               tabIndex={0}
@@ -1119,6 +1115,7 @@ exports[`Components > Analysis > Single Point should render correctly 1`] = `
                     "egressModes": "WALK",
                     "fromTime": 25200,
                     "maxRides": 4,
+                    "maxTripDurationMinutes": 60,
                     "monteCarloDraws": 200,
                     "reachabilityThreshold": 0,
                     "toTime": 32400,
